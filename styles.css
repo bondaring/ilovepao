@@ -1,0 +1,128 @@
+body {
+    max-width: 1200px;
+    background: radial-gradient(circle, white 0%, red 100%);
+    height: 100vh;
+    width: 90vw;
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 7rem;
+    color: red;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px red;
+    transition: all 3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pao {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    z-index: 1;
+    transform: rotate(-45deg);
+    top: -34px;
+    left: -10px;
+    font-weight: 400;
+}
+.corazon {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transform: rotate(45deg);
+    position: relative;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.corazon::after,
+.corazon::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color:red;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+.corazon::after {
+    left: -25px;
+}
+.corazon::before {
+    
+    top: -25px;
+}
+
+  @keyframes heartbeat {
+    from {
+      -webkit-transform:rotate(45deg) scale(1);
+              transform:rotate(45deg) scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform:rotate(45deg) scale(0.91);
+              transform:rotate(45deg) scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform:rotate(45deg) scale(0.98);
+              transform:rotate(45deg) scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform:rotate(45deg) scale(0.87);
+              transform:rotate(45deg) scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform:rotate(45deg) scale(1);
+              transform:rotate(45deg)  scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+/*
+.corazon {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transform: rotate(45deg);
+    position: relative;
+    
+    animation: latido 1.2s linear infinite;
+}
+.corazon::after,
+.corazon::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color:red;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+.corazon::after {
+    left: -25px;
+}
+.corazon::before {
+    
+    top: -25px;
+}
+
+@keyframes latido {
+   0% {
+       transform: rotate(45deg) scale(1);
+   } 
+   50% {
+       transform: rotate(45deg) scale(1.4);
+   }
+    100% {
+    transform: rotate(45deg) scale(1);
+} 
+}
+*/
